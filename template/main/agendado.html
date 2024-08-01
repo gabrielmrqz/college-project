@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{item.nome}}</br>
+    {{item.emails}}</br>
+    {{item.setor}}</br>
+    {{item.template}}</br>
+    {{item.data_hora}}</br>
+    {{item.id}}<br>
+    <a href="{%url 'cancelamento_agendamento' item.id%}">Cancelar o agendamento</a>
+</body>
+</html>

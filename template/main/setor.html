@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gerenciador de Setores</title>
+	<style>
+		body {
+			background-color: #f0f7ff;
+			color: #333;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			background-color: #2196f3;
+			color: #fff;
+			font-size: 24px;
+			margin: 0;
+			padding: 16px;
+			text-align: center;
+		}
+		table {
+			border-collapse: collapse;
+			margin: 16px;
+			width: calc(100% - 32px);
+		}
+		th, td {
+			border: 1px solid #ccc;
+			padding: 8px;
+			text-align: left;
+		}
+		th {
+			background-color: #2196f3;
+			color: #fff;
+		}
+		input[type=text], input[type=email], input[type=file] {
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-bottom: 16px;
+			padding: 8px;
+			width: 100%;
+		}
+		input[type=submit] {
+			background-color: #2196f3;
+			border: none;
+			border-radius: 4px;
+			color: #fff;
+			cursor: pointer;
+			padding: 8px 16px;
+		}
+		input[type=submit]:hover {
+			background-color: #0d8bf2;
+		}
+	</style>
+</head>
+<body>
+	<h1>Setor</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Emails</th>
+				<th>Ações</th>
+			</tr>
+		</thead>
+		<tbody>
+            {%for item in emails%}
+			<tr>
+				<td>{{item}}</td>
+				
+				<td><a href="{% url 'remover_item' setor_id=setorid item_id=item %}"><button>Remover</button></a></td>
+			</tr>
+            {%endfor%}
+			<tr>
+				<form method="post" action="/setor/{{setorid}}">
+					{% csrf_token %}
+				<td>
+					<input type="email" placeholder="Digite um email" name="email_add" id="email_add" for="email_add">
+					<input type="file" accept=".txt,.csv" id="file" for="file">
+				</td>
+				<td><button type="submit" name="enviar">Adicionar</button></td>
+			</form>
+			</tr>
+		</tbody>
+	</table>
+	<input type="submit" value="Excluir Setor">
+</body>
+</html>
