@@ -18,6 +18,7 @@ The function **`checking_time`** is responsible for checking whether the schedul
 
 ----------------------------------------------------------------
 ![Index and phishing function](/images/Screenshot_3.png)
+
 The **`index`** function is decorated with **`@login_required`** to ensure that the user must be authenticated to access it. It returns the rendering of the **`HTML main/index.html.`** template
 
 The **`phishing`** function has the following parameters:
@@ -36,6 +37,7 @@ The **`phishing`** function has the following parameters:
 
 ----------------------------------------------------------------
 ![login_page function](/images/Screenshot_4.png)
+
 The **`login_page(request)`** function displays the login page and, if the form is submitted, authenticates the user and redirects to the main page.
 
 - Parameters: **`request`** (HttpRequest object).
