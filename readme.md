@@ -8,6 +8,7 @@
 >The **modules** and **libraries** above are used throughout the code.
 
 ![Function checking_time](/images/Screenshot_2.png)
+
 The function **`checking_time`** is responsible for checking whether the scheduled time and date to send the phishing have been reached and, if so, sending the email. The function receives the following parameters:
 
 - **`date_time`** date and time at which the phishing should be sent (format "yyyy-mm-ddTHH:MM")
@@ -18,6 +19,7 @@ The function **`checking_time`** is responsible for checking whether the schedul
 
 ----------------------------------------------------------------
 ![Index and phishing function](/images/Screenshot_3.png)
+
 The **`index`** function is decorated with **`@login_required`** to ensure that the user must be authenticated to access it. It returns the rendering of the **`HTML main/index.html.`** template
 
 The **`phishing`** function has the following parameters:
@@ -36,6 +38,7 @@ The **`phishing`** function has the following parameters:
 
 ----------------------------------------------------------------
 ![login_page function](/images/Screenshot_4.png)
+
 The **`login_page(request)`** function displays the login page and, if the form is submitted, authenticates the user and redirects to the main page.
 
 - Parameters: **`request`** (HttpRequest object).
