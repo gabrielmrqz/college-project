@@ -8,6 +8,7 @@
 >The **modules** and **libraries** above are used throughout the code.
 
 ![Function checking_time](/images/Screenshot_2.png)
+
 The function **`checking_time`** is responsible for checking whether the scheduled time and date to send the phishing have been reached and, if so, sending the email. The function receives the following parameters:
 
 - **`date_time`** date and time at which the phishing should be sent (format "yyyy-mm-ddTHH:MM")
